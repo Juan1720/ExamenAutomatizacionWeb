@@ -41,7 +41,7 @@ public class LoginStepsDef {
 
     @After
     public void quitDriver(){
-        //driver.quit();
+        driver.quit();
     }
 
     @Dado("que me encuentro en la página de login de Saucedemo")
@@ -82,8 +82,8 @@ public class LoginStepsDef {
     @Y("reviso que el carrito de compras tenga un item agregado")
     public void reviso_que_el_carrito_de_compras_tenga_un_item_agregado() {
         InventorySteps inventorySteps = new InventorySteps(driver);
-        int itemListCart = inventorySteps(driver).getItemSize();
         inventorySteps.shoppingCart();
+        int itemListCart = inventorySteps(driver).itemCartSize();
         screenShot();
         Assertions.assertTrue(itemListCart > 0,"El carrito de compras tienes " + itemListCart);
     }
