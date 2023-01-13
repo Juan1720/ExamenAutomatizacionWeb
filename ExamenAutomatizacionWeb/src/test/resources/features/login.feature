@@ -3,7 +3,8 @@
 Característica: Login
   Yo, como usuario
   Quiero, tener una opción para iniciar sesión
-  Para ver todos los items
+  Para ver todos los items y
+  agregar productos al carrito de compras.
 
   @test
   Escenario: Iniciar sesión
